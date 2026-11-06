@@ -1,0 +1,54 @@
+<main>
+  <section class="card" aria-labelledby="page-title">
+    <div class="form-panel">
+      <div class="heading">
+        <span class="heading-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+          </svg>
+        </span>
+        <div>
+          <h1 id="page-title">Cadastrar Produto</h1>
+          <p class="subtitle">Preencha os dados abaixo para adicionar um novo produto à loja.</p>
+        </div>
+      </div>
+
+      <form id="product-form" method="POST" action="/cadastrar-produto">
+        <div class="field field-name">
+          <label for="product-name">Nome do produto</label>
+          <input id="product-name" name="nome" type="text" value="{{valores.nome}}" maxlength="100" placeholder="Digite o nome do produto" autocomplete="off" required>
+        </div>
+
+        <div class="field field-price">
+          <label for="product-price">Preço (R$)</label>
+          <input id="product-price" name="preco" type="number" value="{{valores.preco}}" min="0.01" step="0.01" placeholder="Digite o preço do produto" required>
+        </div>
+
+        <div class="field field-quantity">
+          <label for="product-quantity">Quantidade</label>
+          <input id="product-quantity" name="quantidade" type="number" value="{{valores.quantidade}}" min="0" step="1" placeholder="Digite a quantidade em estoque" required>
+        </div>
+
+        <div class="field field-category">
+          <label for="product-category">Categoria</label>
+          <select id="product-category" name="categoria" required>
+            <option value="" disabled{{#unless valores.categoria}} selected{{/unless}}>Selecione a categoria</option>
+            {{#each categorias}}
+            <option value="{{id}}"{{#if selecionada}} selected{{/if}}>{{titulo}}</option>
+            {{/each}}
+          </select>
+        </div>
+
+        <p class="form-message{{#if erro}} is-error{{/if}}" id="form-message" role="status" aria-live="polite">{{#if erro}}{{erro}}{{else}}{{mensagem}}{{/if}}</p>
+
+        <div class="submit-row">
+          <button type="submit">Cadastrar Produto</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>MR Soluções © 2026 - Todos os direitos reservados.</p>
+</footer>

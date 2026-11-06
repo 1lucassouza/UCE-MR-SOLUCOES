@@ -1,0 +1,60 @@
+<footer class="rodape">
+  <div class="secoes-rodape">
+    <section class="categorias section-rodape">
+      <h1>Nossas Especialidades</h1>
+      {{#each rodape.especialidades}}
+      <li class="item-rodape"><a href="{{href}}">{{texto}}</a></li>
+      {{/each}}
+    </section>
+
+    <section class="produtos section-rodape">
+      <h1>Conheça-nos</h1>
+      {{#each rodape.conheca}}
+      <li class="item-rodape"><a href="{{href}}">{{texto}}</a></li>
+      {{/each}}
+    </section>
+
+    <section class="suporte section-rodape">
+      <h1>Entre em contato com nosso suporte</h1>
+      <small class="item-rodape">{{empresa.telefone}}</small><br>
+      <small>Ou pelo email</small><br>
+      <small>{{empresa.emailSuporte}}</small>
+    </section>
+
+    <section class="mapa section-rodape">
+      <h1>Nos faça uma Visita!</h1>
+      <div class="endereco">
+        <div class="text-endereco">
+          <p>{{empresa.endereco}}</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <hr>
+
+  <section class="rodape-inferior">
+    <div class="horario">
+      <h5>Horário de Funcionamento:</h5>
+      <p>Segunda - Sexta: 07:00-19:00 <br>
+        Sábado - Domingo e Feriados: Não abrimos</p>
+    </div>
+
+    <div class="logos-rodape">
+      <img src="/img/image_3-removebg-preview 1.png" alt="Logo MR">
+    </div>
+
+    <div class="redes-rodape">
+      <a href="{{empresa.instagram}}"><img src="/img/icone_insta (2).svg" alt="icone Instagram"
+          width="25" height="25"> {{empresa.instagramUsuario}}</a>
+      <a href="mailto:{{empresa.email}}"><img src="/img/icone_email.svg" alt="icone email" width="25"
+          height="25"> {{empresa.email}}</a>
+      <a href="{{empresa.whatsapp}}"><img src="/img/icone_whats.svg" alt="icone whatsapp" width="25"
+          height="25"> {{empresa.telefone}}</a>
+    </div>
+  </section>
+</footer>
+
+<div class="copy">
+  <p>Desenvolvido pelos alunos da Instituição Unifae - 2026 Copyright © - MR SOLUÇÕES</p>
+</div>

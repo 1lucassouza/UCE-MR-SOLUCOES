@@ -1,0 +1,24 @@
+<main class="container">
+  <h1 class="prod_title">Produtos</h1>
+
+  {{#each categorias}}
+  <section class="category-section">
+    <h3 class="nome_prod">{{titulo}}</h3>
+    <div class="produtos-exp"{{#if ancora}} id="{{ancora}}"{{/if}}>
+      {{#each produtos}}
+      <div class="cardS">
+        <div class="quadrado-card-prod">
+          <div class="title-card-prod">Adicionar ao carrinho</div>
+          <button class="btn-card-prod add-cart" type="button" data-id="{{id}}" data-name="{{nome}}" data-price="{{precoValor}}" data-image="{{imagem}}" data-desc="{{descricao}}">Adicionar ao carrinho</button>
+        </div>
+        <img src="{{imagem}}" alt="{{nome}}">
+        <p>{{nome}}</p>
+        <span class="card-price">{{precoTexto}}</span>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+  {{/each}}
+</main>
+
+<br>

@@ -1,0 +1,37 @@
+<div class="servicos">
+  <h1>Serviços</h1>
+
+  {{#each categorias}}
+  <h3>{{titulo}}</h3>
+  <div class="servicos-exp"{{#if id}} id="{{id}}"{{/if}}>
+    {{#each itens}}
+    <div class="cardS">
+      <div class="quadrado-card-serv">
+        <div class="title-card-serv">Entre em contato <br>e adquira o serviço:</div>
+        <a class="btn-card-serv" href="{{@root.linkWhatsappServico}}">Entre em contato</a>
+      </div>
+      <img {{#if classe}}class="{{classe}}"{{/if}} src="{{imagem}}" alt="{{alt}}" onerror="this.onerror=null; this.src='/img/organiza.png';"
+>
+      <p>{{texto}}</p>
+    </div>
+    {{/each}}
+  </div>
+  {{/each}}
+
+  <br><br><br><br><br><br>
+
+  <div class="informacoes-complementares">
+    <h1>Vantagens e motivos de utilizarem de nossos serviços</h1>
+
+    {{#each vantagens}}
+    <div class="infCompl-servicos{{#if reverso}} infCompl-servicos-reverse{{/if}}">
+      <img class="img-infCompl-servicos" src="{{imagem}}" alt="">
+      <div id="{{id}}">
+        <h2>{{titulo}}</h2>
+        <p>{{texto}}</p>
+        <button class="btn-infCompl-servicos"><a href="/contato">Saiba Mais</a></button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>

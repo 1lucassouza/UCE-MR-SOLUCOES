@@ -1,0 +1,42 @@
+<main class="contato">
+  <h1>Contato</h1>
+  <div class="ctt-conteudo">
+    <div class="ctt-text">
+      <h2>Envie-nos uma <br>
+        Mensagem</h2>
+      <p>
+        Estamos prontos para te atender com agilidade e eficiência! Seja para soluções em segurança eletrônica ou outras tecnologias, é só entrar em contato — nossa equipe responde o mais rápido possível, porque sabemos que, quando o assunto é segurança, o tempo faz toda a diferença.
+        <br><br>Estamos localizados na Rua Santo Antônio, 566-Bairro São Benedito.
+        São João da Boa Vista, SP</p>
+    </div>
+    <div class="ctt-right">
+      <div class="ctt-right-title">
+        <h2>Contato</h2>
+      </div>
+      <div class="ctt-right-content">
+        <div class="ctt-contato">
+
+          <label for="nome">Nome:</label><br>
+          <input type="text" id="nome" placeholder="Seu nome"><br><br>
+
+          <label for="email">Seu E-mail:</label><br>
+          <input type="email" id="email" placeholder="seu@email.com"><br><br>
+
+          <label for="mensagem">Mensagem:</label><br>
+          <textarea id="mensagem" rows="5" cols="30" placeholder="Escreva aqui..."></textarea><br><br>
+          <button onclick="toggleSlaPopup()">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="fundo-sla">
+    <div id="sla">
+      <button class="sair" onclick="sair()"><img src="/img/x.svg" alt=""></button>
+      <h2>Escolha o modo de envio:</h2>
+      <div class="sla-buttons">
+        <button onclick="enviarEmail()">Enviar via E-mail</button>
+        <button onclick="enviarWhatsapp()">Enviar via WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</main>

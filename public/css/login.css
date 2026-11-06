@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #000000;
+  color: #ffffff;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.login-card {
+  width: min(420px, 100%);
+  background: #090909;
+  border-radius: 24px;
+  padding: 36px 30px;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-logo {
+  max-width: 110px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.login-header h1 {
+  margin: 0;
+  color: #f1f1f1;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.login-header p {
+  margin: 8px auto 0;
+  color: #c6c6c6;
+  font-size: 14px;
+}
+
+.login-form {
+  display: grid;
+  gap: 16px;
+}
+
+.login-form label {
+  font-size: 13px;
+  color: #d9d9d9;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f8f8f8;
+  font-size: 15px;
+}
+
+.login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.login-button {
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  border-radius: 12px;
+  background-color: #00951f;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #00b22c;
+}
+
+.forgot-link {
+  display: block;
+  margin: 22px auto 0;
+  text-align: center;
+  color: #a8a8a8;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 24px 0 16px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.divider span {
+  margin: 0 12px;
+  color: #808080;
+  font-size: 13px;
+}
+
+.google-button {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.google-button:hover{
+  background-color: #dbdbdb;
+}
+
+.img-google{
+  margin-right: 10px;
+}
+/* mensagens de erro / sucesso dos formulários */
+.msg-erro,
+.msg-ok {
+  padding: 10px 12px;
+  margin: 0 0 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.msg-erro {
+  background-color: #fdecea;
+  color: #b3261e;
+}
+
+.msg-ok {
+  background-color: #e6f4ea;
+  color: #1e6b34;
+}

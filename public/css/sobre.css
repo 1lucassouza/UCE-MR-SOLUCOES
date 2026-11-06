@@ -1,0 +1,184 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+.titulo{
+  text-align: center;
+}
+
+.img-principal{
+  display: inline-block;
+  width: 100%;
+  height: 350px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+/* Títulos de seção */
+/* main > div > h1,
+main > div > h2 {
+  font-size: 22px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #222;
+  border-left: 5px solid #00c300;
+  padding-left: 10px;
+} */
+
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* Blocos padrão */
+.bloco {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-top: 200px;
+}
+
+.bloco .texto {
+  flex: 1;
+  border-left: 5px solid #006400;
+  padding-left: 20px;
+}
+
+.bloco .texto h2, .bloco .texto h3 {
+  margin-bottom: 10px;
+}
+
+.bloco .texto p {
+  line-height: 1.6;
+}
+
+.texto-historia p {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+/* Sobreposição das imagens */
+.sobreposicao .imagens {
+  position: relative;
+  width: fit-content;
+}
+
+.sobreposicao .img-principal {
+  height: 320px; 
+  width: auto; 
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sobreposicao .img-secundaria {
+  height: 220px; 
+  width: auto; 
+  position: absolute;
+  bottom: -20px;
+  right: -40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border: 3px solid white;
+}
+
+.bloco .imagem img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Fundadores */
+.fundadores {
+  margin-bottom: 50px;
+}
+
+.fundadores h3 {
+  border-left: 5px solid #006400;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.fundadores .cards {
+  display: flex;
+  gap: 120px;
+  flex-wrap: wrap;
+}
+
+.fundadores .card {
+  text-align: center;
+}
+
+.fundadores .card img {
+  width: 107px;
+  height: 139px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.fundadores .card p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Lista */
+.lista {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.lista h3 {
+  border-left: 5px solid #006400;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  color: #006400;
+}
+
+.lista ul {
+  margin-bottom: 20px;
+  padding-left: 40px;
+}
+
+.lista ul li {
+  margin-bottom: 10px;
+  position: relative;
+  list-style-type: none;
+}
+
+.lista ul li::before {
+  content: "✔";
+  color: #006400;
+  position: absolute;
+  left: -25px;
+}
+
+.lista .imagem img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

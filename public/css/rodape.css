@@ -1,0 +1,282 @@
+.rodape {
+    background-color: rgba(0, 0, 0, 0.938);
+    color: white;
+    padding: 30px 65px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.icon-endereco {
+  height: 25px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.secoes-rodape {
+  display: flex;
+  gap: 80px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.section-rodape {
+    flex: 1;
+    min-width: 180px;
+}
+
+.section-rodape h1 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.item-rodape {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+.item-rodape a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.item-rodape a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid white;
+    margin: 10px 0;
+}
+
+.logos-rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logos-rodape img {
+    width: 100px;
+}
+
+.parcerias {
+    text-align: center;
+}
+
+.parcerias h2 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.parcerias ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.item-parceria a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.item-parceria a:hover {
+    text-decoration: underline;
+}
+
+.rodape-inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.map {
+  max-width: 300px;
+  width: 100%;
+}
+
+.map iframe {
+  width: 100%;
+  height: 225px;
+  border: 0;
+}
+
+.redes-rodape{
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.redes-rodape a{
+  color: #ddd;
+}
+.redes-rodape img{
+  margin-top: 5px;
+}
+.copy{
+  background-color: #006400;
+  width: 100%;
+  text-align: center;
+}
+
+.copy p{
+  margin: 0;
+  padding: 10px;
+  color: #ddd;
+}
+
+.voltarInicio{
+  width: 40px;
+  padding: 9px;
+  border-radius: 100%;
+  background-color: #006400;
+  text-align: center;
+}
+.vi{
+position: fixed;
+bottom: 20px; /* Distância do fundo */  /* Distância da direita */
+z-index: 1000;
+left: 96%;
+width: 100%;
+display: flex;
+}
+
+
+.voltarInicio a{
+  color: #ddd;
+  text-decoration: none;
+}
+
+/*Fim Rodapé*/
+@media (max-width: 768px) {
+    .map iframe{
+        width: 330px;
+    }
+    .vt{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .nav-rodape{
+        margin: 10%;
+        display: flex;
+        gap: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .nav-exp-rodape{
+        display: flex;
+        gap:5px;
+        flex-direction: column;
+    }
+    .logo-rodape{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .redes-rodape{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (max-width: 1024px) {
+    .cab-conteudo {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar a {
+      margin: 10px 0;
+      top: 0;
+    }
+  
+    .rodape-cima {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .map iframe {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 600px) { 
+    
+    .cab-conteudo {
+      margin: 0;
+      
+    }
+  
+    .logo-cabecalho img,
+    .logo-rodape img {
+      width: 80px;
+      height: auto;
+    }
+  
+    .redes-rodape a {
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+    .quadrado-card-serv {
+      padding: 10px;
+      text-align: center;
+    }
+    .ctt-conteudo{
+      display: block;
+      margin: 10%;
+      gap: 0;
+    }
+    .ctt-right{
+      width: 100%;
+    }
+    .ctt-text{
+      width: 100%;
+    }
+  }
+
+  .rodape a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: inherit;
+    vertical-align: middle;
+}
+
+.rodape a:hover {
+    text-decoration: underline;
+}
+
+.rodape .contato-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.rodape .contato-item i,
+.rodape .contato-item svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.rodape .contato-item a {
+    line-height: 1.2;
+    margin: 0;
+}

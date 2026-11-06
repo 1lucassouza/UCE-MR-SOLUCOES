@@ -1,0 +1,91 @@
+<main class="container">
+  <h1 class="titulo">Sobre Nós</h1>
+
+  <!-- Seção 1 com sobreposição -->
+  <section class="bloco sobreposicao">
+    <div class="texto">
+      <h2>A melhor empresa de soluções eletrônicas da região com os melhores Produtos e serviços</h2>
+
+      <div class="texto-historia">
+        <p>
+          A MR Soluções surgiu com o propósito de transformar o cenário de soluções eletrônicas na nossa região. Desde o
+          início, nossa missão sempre foi oferecer serviços de qualidade, prezando pela eficiência, inovação e
+          atendimento personalizado. Fundada por profissionais apaixonados por tecnologia, a empresa nasceu da
+          percepção de que era possível entregar mais do que simplesmente conexão — era possível oferecer soluções
+          completas e personalizadas para empresas e residências.
+        </p>
+        <p>
+          Nossa trajetória começou de forma modesta, atendendo pequenos negócios e clientes locais. Com muito
+          trabalho, dedicação e foco na excelência, fomos conquistando a confiança dos nossos clientes e ampliando
+          nosso portfólio de serviços. A cada projeto, fortalecemos nosso compromisso com a qualidade, investindo
+          constantemente em equipamentos modernos, capacitação técnica e aprimoramento dos nossos processos.
+        </p>
+        <p>
+          Ao longo dos anos, a MR Soluções se consolidou como referência no setor de serviços eletrônicos, destacando-se
+          pela agilidade no atendimento, pela proximidade com os clientes e pela entrega de soluções que realmente
+          fazem a diferença. Nossa história é marcada por desafios superados, crescimento sustentável e,
+          principalmente, pela valorização das relações humanas, que sempre estiveram no centro do nosso negócio.
+        </p>
+        <p>
+          Hoje, somos uma empresa reconhecida por unir tecnologia, inovação e compromisso. Seguimos em constante
+          evolução, atentos às transformações do mercado e às necessidades dos nossos clientes. A MR Soluções mantém
+          firme seu propósito: conectar pessoas, negócios e oportunidades, oferecendo sempre os melhores produtos e
+          serviços, com a qualidade e confiança que nossos clientes merecem.
+        </p>
+      </div>
+    </div>
+    <div class="imagens">
+      <img src="/img/img1_sobre.png" class="img-principal" alt="Imagem serviços">
+      <img src="/img/img2_sobre.png" class="img-secundaria" alt="Imagem infraestrutura">
+    </div>
+  </section>
+
+
+  <section class="fundadores">
+    <h3>Fundadores</h3>
+    <div class="cards">
+      {{#each fundadores}}
+      <div class="card">
+        <img src="{{imagem}}" alt="{{nome}}">
+        <p>{{nome}}</p>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+
+  <section class="bloco">
+    <div class="texto">
+      <h3>Sempre fornecendo os melhores produtos e serviços de qualidade</h3>
+      <p>Na MrSolucoes, acreditamos que cada desafio é uma oportunidade de fazer mais e melhor. Trabalhamos todos os
+        dias com foco na excelência, inovação e compromisso, oferecendo soluções que realmente fazem a diferença para
+        nossos clientes.
+        Nosso propósito vai além de entregar produtos e serviços de qualidade — queremos gerar valor, transformar
+        realidades e construir parcerias sólidas.
+        Conte com a MrSolucoes: onde a confiança se une à tecnologia para impulsionar o seu sucesso.</p>
+    </div>
+    <div class="imagem">
+      <img src="/img/img_sobre-baixo.png" alt="Imagem produtos">
+    </div>
+  </section>
+
+
+  <section class="lista">
+    <div>
+      <h3>5 motivos para escolher a MR Soluções</h3>
+      <ul>
+        {{#each motivos}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <div>
+      <h3>5 Serviços em que a MR Soluções pode lhe auxiliar</h3>
+      <ul>
+        {{#each servicosLista}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+</main>

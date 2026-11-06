@@ -1,0 +1,72 @@
+
+<div class="container mt-5 mb-5 perfil-container">
+
+  <div class="perfil-card">
+
+    <h1>Editar meus dados</h1>
+
+    {{#if sucesso}}
+    <p class="perfil-sucesso">
+      Dados atualizados com sucesso!
+    </p>
+    {{/if}}
+
+    <form action="/editar-dados" method="POST">
+
+      <label>Nome completo</label>
+      <input class="form-control mb-3"
+        name="nome"
+        value="{{usuarioDados.nome}}"
+        required>
+
+      <label>E-mail</label>
+      <input class="form-control mb-3"
+        type="email"
+        name="email"
+        value="{{usuarioDados.email}}"
+        required>
+
+      <label>DDD</label>
+      <input class="form-control mb-3"
+        name="ddd"
+        value="{{usuarioDados.ddd}}">
+
+      <label>Telefone</label>
+      <input class="form-control mb-3"
+        name="telefone"
+        value="{{usuarioDados.telefone}}">
+
+      <label>CEP</label>
+      <input class="form-control mb-3"
+        name="cep"
+        value="{{usuarioDados.cep}}">
+
+      <label>Rua</label>
+      <input class="form-control mb-3"
+        name="rua"
+        value="{{usuarioDados.rua}}">
+
+      <label>Bairro</label>
+      <input class="form-control mb-3"
+        name="bairro"
+        value="{{usuarioDados.bairro}}">
+
+      <label>Número</label>
+      <input class="form-control mb-3"
+        name="numero"
+        value="{{usuarioDados.numero}}">
+
+      <label>Complemento</label>
+      <input class="form-control mb-3"
+        name="complemento"
+        value="{{usuarioDados.complemento}}">
+
+      <button class="btn btn-success perfil-btn">
+        Salvar alterações
+      </button>
+
+    </form>
+
+  </div>
+
+</div>

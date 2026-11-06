@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+/* Estilos do conteúdo de contato */
+.ctt-conteudo {
+  margin: 10%;
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.contato h1 {
+  text-align: center;
+}
+
+.ctt-text {
+  width: 40%;
+}
+
+.ctt-text h2 {
+  padding: 0 0 0 20px;
+  border-left: solid 8px #006400; 
+  color: #006400; /* Verde fluorescente */
+}
+
+/* Estilos do formulário de contato (lado direito) */
+/* Card do formulário de contato */
+.ctt-right {
+  padding: 35px;
+  border-radius: 22px;
+  background: #ffffff;
+  color: #222;
+  width: 40%;
+  border: 1px solid #e5eee5;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ctt-right:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 100, 0, 0.12);
+}
+
+.ctt-right-title {
+  display: flex;
+  color: #006400;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.ctt-contato {
+  width: 100%;
+}
+
+.ctt-right label {
+  font-weight: 600;
+  display: block;
+  color: #333;
+  margin-bottom: 9px;
+  font-size: 15px;
+}
+
+.ctt-right input,
+.ctt-right textarea {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #dce5dc;
+  border-radius: 11px;
+  font-size: 14px;
+  color: #333;
+  background: #f8faf8;
+  margin-bottom: 23px;
+  font-family: inherit;
+  transition: all 0.25s ease;
+}
+
+.ctt-right input:focus,
+.ctt-right textarea:focus {
+  outline: none;
+  border: 1px solid #009933;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(0, 153, 51, 0.12);
+}
+
+.ctt-right textarea {
+  resize: vertical;
+  min-height: 125px;
+}
+
+/* Botão "Enviar" do formulário */
+.ctt-contato button {
+  background: linear-gradient(135deg, #00b83f, #008c2d);
+  color: white;
+  border: none;
+  padding: 13px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 5px;
+  transition: all 0.25s ease;
+}
+
+.ctt-contato button:hover {
+  background: linear-gradient(135deg, #009b35, #006f24);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 150, 50, 0.2);
+}
+
+
+#sla .sair {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  left: auto;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #f1f5f1;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+#sla .sair:hover {
+  background: #e0eee0;
+  transform: scale(1.05);
+}
+
+#sla .sair img {
+  width: 13px;
+  height: 13px;
+}
+/* Estilos do pop-up de seleção de envio */
+#fundo-sla {
+  display: none;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Nova regra CSS para exibir o pop-up quando a classe 'show' for adicionada pelo JS */
+#fundo-sla.show {
+  display: flex;
+}
+
+#sla {
+  position: relative;
+  text-align: center;
+  background: #ffffff;
+  padding: 40px 35px;
+  width: 420px;
+  max-width: 90%;
+  color: #222;
+  border-radius: 20px;
+  border: 1px solid #e5eee5;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  animation: aparecerModal 0.3s ease;
+}
+
+@keyframes aparecerModal {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+#sla h2 {
+  font-size: 23px;
+  font-weight: 700;
+  margin: 0 0 30px;
+  color: #006400;
+}
+
+.sla-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.sla-buttons button {
+  background: linear-gradient(135deg, #00b83f, #008c2d);
+  color: #ffffff;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 11px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.25s ease;
+}
+.sla-buttons button:hover {
+  background: linear-gradient(135deg, #009b35, #006f24);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 150, 50, 0.2);
+}
+
+
+
+
+/* Correções e melhorias de responsividade */
+@media (max-width: 768px) {
+  .ctt-conteudo {
+      flex-direction: column; /* Coloca os elementos em coluna em telas menores */
+      margin: 5%; /* Reduz a margem */
+      gap: 30px;
+  }
+
+  .ctt-text,
+  .ctt-right {
+      width: 100%; /* Ocupa a largura total */
+  }
+
+  #sla {
+      width: 90%; /* Aumenta a largura do pop-up em telas menores */
+      padding: 30px;
+  }
+
+  #sla h2 {
+      font-size: 20px;
+  }
+
+  #sla button {
+      font-size: 16px;
+      padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ctt-right {
+      padding: 20px;
+  }
+  .ctt-right-title img {
+      width: 25px;
+      height: 25px;
+  }
+  .ctt-text h2 {
+      font-size: 20px;
+  }
+  .ctt-text p {
+      font-size: 14px;
+  }
+}

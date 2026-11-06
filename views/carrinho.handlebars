@@ -1,0 +1,57 @@
+<main class="cart-page">
+  <section class="cart-title">
+    <h1>Carrinho <span>(0 itens)</span></h1>
+  </section>
+
+  <section class="cart-layout">
+    <section class="cart-items-card">
+      <div class="cart-items-header">
+        <span>Produto</span>
+        <span>Quantidade</span>
+        <span>Preço</span>
+        <span>Total</span>
+      </div>
+      <div class="cart-items-list"></div>
+    </section>
+
+    <aside class="summary-card">
+      <h2>Resumo do Pedido</h2>
+
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <strong>R$0,00</strong>
+      </div>
+
+      <div class="summary-block">
+        <label for="cep">Frete</label>
+        <div class="frete-row">
+          <input id="cep" type="text" placeholder="CEP" />
+          <button type="button">OK</button>
+        </div>
+        <div class="frete-value">R$0,00</div>
+      </div>
+
+      <div class="summary-block">
+        <label for="cupom">Cupom de Desconto</label>
+        <div class="coupon-row">
+          <input id="cupom" type="text" placeholder="Cupom" />
+          <button type="button">Aplicar</button>
+        </div>
+      </div>
+
+      <div class="summary-total">
+        <span>Total:</span>
+        <strong>R$0,00</strong>
+      </div>
+
+      <button class="btn-primary" type="button">Finalizar Compra</button>
+      <button class="btn-secondary" type="button">Continuar Comprando</button>
+
+      <div class="payment-icons">
+        <span><img src="/img/visa.png" alt="VISA"></span>
+        <span><img src="/img/mastercard.png" alt="Mastercard"></span>
+        <span><img src="/img/pix.png" alt="PIX"></span>
+      </div>
+    </aside>
+  </section>
+</main>

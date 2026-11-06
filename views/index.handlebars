@@ -1,0 +1,219 @@
+<div class="conteudo">
+  <div class="img-principal">
+    <div class="overlay"></div>
+    <div id="texto-img">
+      <h2 class="txt">Bem vindo à {{empresa.nome}}</h2>
+      <br>
+      <p class="txt">"A melhor empresa de serviços eletrônicos da região!"</p>
+    </div>
+  </div>
+
+  <br><br><br><br><br>
+
+  <div id="cards">
+    <h2 class="txt-centro">O que está buscando hoje?</h2>
+
+    <div class="card-container">
+      {{#each atalhos}}
+      <div class="card-comp">
+        <a href="{{href}}"><img src="{{imagem}}" alt="" class="img-card"></a>
+        <p>{{texto}}</p>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <main class="container">
+    <br><br><br>
+
+    <h1 class="txt-centro2">Para a sua casa</h1>
+    <br>
+    <div class="cardsProdutosCasa">
+      {{#each paraCasa}}
+      <div class="cardProdutosCasa">
+        <img class="img-produtosCasa" src="{{imagem}}" alt="img-produto-card">
+        <hr class="hr-produtosCasa">
+        <div class="textos-card">
+          <p>{{nome}}</p>
+          <button class="btn-textos-card"><a href="/produtos">Veja Mais</a></button>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </main>
+</div>
+
+<br><br><br><br><br><br>
+
+<h1 class="txt-centro">Nossos serviços mais Buscados</h1>
+<section class="servicos-mais-buscados">
+  {{#each servicosDestaque}}
+  <div class="servicos">
+    {{#unless invertido}}
+    <img class="img-servicos" src="{{imagem}}" alt="">
+    {{/unless}}
+
+    <div>
+      <h2>{{titulo}}</h2>
+      <br>
+      <p>Oferecemos os melhores serviços <br>e recursos de {{assunto}}</p>
+      <br>
+      <button class="btn-servicos"><a href="/sobre">Saiba Mais</a></button>
+    </div>
+
+    {{#if invertido}}
+    <img class="img-servicos" src="{{imagem}}" alt="">
+    {{/if}}
+  </div>
+  {{#unless @last}}
+  <br><br>
+  {{/unless}}
+  {{/each}}
+</section>
+
+<br><br><br><br>
+
+<div class="videosServico" id="videosServico">
+  <h1 class="txt-videos">Assista um pouco do nosso trabalho feito!</h1>
+  <div class="videos">
+    {{#each videos}}
+    <div class="video">
+      <iframe class="iframe-video" src="{{url}}"
+        title="{{titulo}}" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+      <p style="text-align: center; font-weight: bold;">{{legenda}}</p>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+<section id="duvidas" class="duvidas">
+  <div class="container-blogs">
+    <h2 class="section-titulo-duvidas">Algumas dúvidas que podemos te ajudar</h2>
+    <p class="section-subTitulo-duvidas">Estamos dispostos a sempre te ajudar no que necessitar!</p>
+
+    <ul class="duvidas-topico-horizontal">
+      {{#each duvidas}}
+      <li>
+        <a href="{{href}}" class="link-duvida" title="{{titulo}}">
+          {{texto}}
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+
+<div id="clientesS">
+  <h2>Feedbacks e Avaliações dos nossos clientes</h2>
+  <div class="clt-container">
+
+    {{#each depoimentos}}
+    <div class="foto-text-carrosel">
+      <img src="/img/usuario.png" alt="foto cliente">
+
+      <div class="carrosel">
+
+        <input type="radio" name="slider{{id}}" id="slider{{id}}-slide1" checked>
+        <input type="radio" name="slider{{id}}" id="slider{{id}}-slide2">
+
+        <div class="slides">
+          <div class="slide">
+            <div class="text-carrosel">
+              ⭐ ⭐ ⭐ ⭐ ⭐
+              <h4>{{nome}}</h4>
+              <br>
+              <p>{{texto}}</p>
+            </div>
+          </div>
+          <div class="slide">
+            <video height="350px" autoplay loop muted controls>
+              <source src="{{video}}" type="video/mp4">
+              Seu navegador não suporta vídeos.
+            </video>
+          </div>
+        </div>
+
+        <div class="navigation">
+          <label for="slider{{id}}-slide1" class="bar-2"></label>
+          <label for="slider{{id}}-slide2" class="bar"></label>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+  <div class="mandarAvaliacao">
+  <h3>Deseja avaliar nossos serviços?</h3>
+
+  <button class="btn-mandarAvaliacao" id="abrirAvaliacao">
+    Avaliar nossos serviços
+  </button>
+</div>
+
+<div class="modal-avaliacao" id="modalAvaliacao">
+
+  <div class="conteudo-avaliacao">
+
+    <button class="fechar-avaliacao" id="fecharAvaliacao">×</button>
+
+    <h2>Avalie nossos serviços</h2>
+    <p>Sua opinião é muito importante para nós!</p>
+
+    <form id="formAvaliacao">
+
+      <label for="nomeAvaliacao">Seu nome (opcional)</label>
+      <input
+        type="text"
+        id="nomeAvaliacao"
+        placeholder="Digite seu nome"
+        maxlength="60"
+      >
+
+      <label>Sua avaliação</label>
+
+      <div class="estrelas-avaliacao">
+        <input type="radio" name="nota" id="estrela5" value="5">
+        <label for="estrela5">★</label>
+
+        <input type="radio" name="nota" id="estrela4" value="4">
+        <label for="estrela4">★</label>
+
+        <input type="radio" name="nota" id="estrela3" value="3">
+        <label for="estrela3">★</label>
+
+        <input type="radio" name="nota" id="estrela2" value="2">
+        <label for="estrela2">★</label>
+
+        <input type="radio" name="nota" id="estrela1" value="1">
+        <label for="estrela1">★</label>
+      </div>
+
+      <label for="comentarioAvaliacao">Comentário</label>
+
+      <textarea
+        id="comentarioAvaliacao"
+        placeholder="Conte um pouco sobre sua experiência..."
+        maxlength="500"
+        required
+      ></textarea>
+
+      <button type="submit" class="enviar-avaliacao">
+        Enviar avaliação
+      </button>
+
+      <p id="mensagemAvaliacao"></p>
+
+    </form>
+  </div>
+
+</div>
+</div>
+
+<br><br><br>
+
+<script src="/js/paginaPrincipal.js"></script>

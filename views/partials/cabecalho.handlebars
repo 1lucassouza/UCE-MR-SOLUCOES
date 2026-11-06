@@ -1,0 +1,77 @@
+<header class="cabecalho" id="inicioPagina">
+  <div class="logo">
+    <a href="/">
+      <img src="/img/image_3-removebg-preview 1.png" alt="Logo MR" height="70">
+    </a>
+  </div>
+
+  <div class="busca">
+  <form id="formBusca" class="form-busca">
+    <input
+      type="search"
+      id="campoBusca"
+      class="input-buscarProduto"
+      placeholder=" 🔍︎  Buscar produtos ou serviços..."
+      autocomplete="off"
+    >
+    <button type="submit" class="btn-busca">Buscar</button>
+  </form>
+</div>
+
+  <div class="header-right">
+    <nav class="navbar">
+      <ul class="itens-menu">
+        {{#each menu}}
+        <li><a href="{{href}}">{{texto}}</a></li>
+        {{/each}}
+        {{#if usuario.admin}}
+        {{#each menuAdmin}}
+        <li><a href="{{href}}">{{texto}}</a></li>
+        {{/each}}
+        {{/if}}
+      </ul>
+    </nav>
+    <div class="header-actions">
+
+  {{#if usuario}}
+  <div class="perfil-container">
+
+    <button type="button" class="user-badge" id="btnPerfil">
+      <span class="badge">{{usuario.iniciais}}</span>
+      <div>
+        <strong>{{usuario.primeiroNome}}</strong>
+        <small>{{#if usuario.admin}}Administrador{{else}}Minha conta{{/if}}</small>
+      </div>
+    </button>
+
+    <div class="perfil-dropdown" id="menuPerfil">
+
+      <a href="/editar-dados">Editar dados</a>
+
+      {{#unless usuario.admin}}
+      <a href="/minhas-compras">Minhas compras</a>
+      <a href="/contato">Central de atendimento</a>
+      {{/unless}}
+
+      <a href="/logout" class="link-sair">Sair da conta</a>
+
+    </div>
+  </div>
+
+  {{else}}
+  <a href="/login" class="user-badge">
+    <span class="badge">?</span>
+    <div>
+      <strong>Visitante</strong>
+      <small>Entrar</small>
+    </div>
+  </a>
+  {{/if}}
+
+  <a href="/carrinho" class="cart-icon" title="Carrinho" data-count="0">
+    <img src="/img/carrinho_cabecalho.png" alt="Carrinho">
+  </a>
+
+</div>
+  </div>
+</header>

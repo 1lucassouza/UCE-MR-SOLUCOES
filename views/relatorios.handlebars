@@ -1,0 +1,187 @@
+<main class="page">
+    <section class="page-heading" aria-labelledby="page-title">
+      <div class="heading-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M5 19v-5"></path>
+          <path d="M12 19V5"></path>
+          <path d="M19 19v-9"></path>
+        </svg>
+      </div>
+      <div>
+        <h1 id="page-title">Relatórios</h1>
+        <p>Visualize um resumo das informações da sua loja.</p>
+      </div>
+    </section>
+
+    <section class="summary-grid" aria-label="Resumo da loja">
+      <article class="summary-card products-summary">
+        <div class="summary-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="m12 3 9 4.5v9L12 21l-9-4.5v-9L12 3Z"></path>
+            <path d="m3.5 7.7 8.5 4.5 8.5-4.5M12 12.2V21"></path>
+          </svg>
+        </div>
+        <div>
+          <h2>Produtos</h2>
+          <strong>{{produtos.length}}</strong>
+          <p>total de produtos cadastrados</p>
+        </div>
+      </article>
+
+      <article class="summary-card services-summary">
+        <div class="summary-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"></path>
+            <path d="m19.4 13.5 1.1.8-1.4 2.5-1.3-.5a7.7 7.7 0 0 1-1.5.9l-.2 1.4h-2.9l-.2-1.4a7.7 7.7 0 0 1-1.5-.9l-1.3.5-1.4-2.5 1.1-.8a7.4 7.4 0 0 1 0-1.8l-1.1-.8 1.4-2.5 1.3.5a7.7 7.7 0 0 1 1.5-.9l.2-1.4h2.9l.2 1.4a7.7 7.7 0 0 1 1.5.9l1.3-.5 1.4 2.5-1.1.8a7.4 7.4 0 0 1 0 1.8Z" transform="translate(-1.1 -1.5)"></path>
+          </svg>
+        </div>
+        <div>
+          <h2>Serviços</h2>
+          <strong>{{servicos.length}}</strong>
+          <p>total de serviços cadastrados</p>
+        </div>
+      </article>
+
+      <article class="summary-card clients-summary">
+        <div class="summary-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <circle cx="9" cy="8" r="3.2"></circle>
+            <path d="M2.8 19a6.2 6.2 0 0 1 12.4 0v1H2.8v-1Z"></path>
+            <path d="M16 5.2a3.1 3.1 0 0 1 0 6.1M17 14a5.1 5.1 0 0 1 4.2 5v1h-3"></path>
+          </svg>
+        </div>
+        <div>
+          <h2>Clientes</h2>
+          <strong>{{clientes.length}}</strong>
+          <p>total de clientes cadastrados</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="reports-grid" aria-label="Listas da loja">
+      <article class="report-card" id="produtos">
+        <div class="card-heading">
+          <div class="card-title">
+            <span class="small-icon product-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="m12 3 9 4.5v9L12 21l-9-4.5v-9L12 3Z"></path>
+                <path d="m3.5 7.7 8.5 4.5 8.5-4.5M12 12.2V21"></path>
+              </svg>
+            </span>
+            <h2>Produtos</h2>
+          </div>
+          <button class="view-all" type="button" aria-controls="products-table" aria-expanded="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6-10-6-10-6Z"></path>
+              <circle cx="12" cy="12" r="2.5"></circle>
+            </svg>
+            <span>Ver todos</span>
+          </button>
+        </div>
+        <label class="search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.8" cy="10.8" r="6.8"></circle>
+            <path d="m16 16 5 5"></path>
+          </svg>
+          <span class="sr-only">Buscar produto</span>
+          <input type="search" placeholder="Buscar produto..." data-table-search="products-table">
+        </label>
+        <div class="table-wrap">
+          <table id="products-table">
+            <thead><tr><th scope="col">ID</th><th scope="col">Nome</th><th scope="col">Preço</th><th scope="col">Quantidade</th><th scope="col">Categoria</th></tr></thead>
+            <tbody>
+              {{#each produtos}}
+              <tr{{#if oculto}} class="initially-hidden"{{/if}}><td>{{id}}</td><td>{{nome}}</td><td>{{precoTexto}}</td><td>{{quantidade}}</td><td><span class="tag tag-{{cor}}">{{categoria}}</span></td></tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <p class="empty-state" hidden>Nenhum produto encontrado.</p>
+        </div>
+      </article>
+
+      <article class="report-card" id="servicos">
+        <div class="card-heading">
+          <div class="card-title">
+            <span class="small-icon service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3.2"></circle>
+                <path d="m19.4 13.5 1.1.8-1.4 2.5-1.3-.5a7.7 7.7 0 0 1-1.5.9l-.2 1.4h-2.9l-.2-1.4a7.7 7.7 0 0 1-1.5-.9l-1.3.5-1.4-2.5 1.1-.8a7.4 7.4 0 0 1 0-1.8l-1.1-.8 1.4-2.5 1.3.5a7.7 7.7 0 0 1 1.5-.9l.2-1.4h2.9l.2 1.4a7.7 7.7 0 0 1 1.5.9l1.3-.5 1.4 2.5-1.1.8a7.4 7.4 0 0 1 0 1.8Z" transform="translate(-1.1 -1.5)"></path>
+              </svg>
+            </span>
+            <h2>Serviços</h2>
+          </div>
+          <button class="view-all" type="button" aria-controls="services-table" aria-expanded="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6-10-6-10-6Z"></path>
+              <circle cx="12" cy="12" r="2.5"></circle>
+            </svg>
+            <span>Ver todos</span>
+          </button>
+        </div>
+        <label class="search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.8" cy="10.8" r="6.8"></circle>
+            <path d="m16 16 5 5"></path>
+          </svg>
+          <span class="sr-only">Buscar serviço</span>
+          <input type="search" placeholder="Buscar serviço..." data-table-search="services-table">
+        </label>
+        <div class="table-wrap">
+          <table id="services-table">
+            <thead><tr><th scope="col">ID</th><th scope="col">Nome</th><th scope="col">Preço</th><th scope="col">Descrição</th></tr></thead>
+            <tbody>
+              {{#each servicos}}
+              <tr{{#if oculto}} class="initially-hidden"{{/if}}><td>{{id}}</td><td>{{nome}}</td><td>{{precoTexto}}</td><td>{{descricao}}</td></tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <p class="empty-state" hidden>Nenhum serviço encontrado.</p>
+        </div>
+      </article>
+
+      <article class="report-card" id="clientes">
+        <div class="card-heading">
+          <div class="card-title">
+            <span class="small-icon client-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="9" cy="8" r="3.2"></circle>
+                <path d="M2.8 19a6.2 6.2 0 0 1 12.4 0v1H2.8v-1Z"></path>
+                <path d="M16 5.2a3.1 3.1 0 0 1 0 6.1M17 14a5.1 5.1 0 0 1 4.2 5v1h-3"></path>
+              </svg>
+            </span>
+            <h2>Clientes</h2>
+          </div>
+          <button class="view-all" type="button" aria-controls="clients-table" aria-expanded="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6-10-6-10-6Z"></path>
+              <circle cx="12" cy="12" r="2.5"></circle>
+            </svg>
+            <span>Ver todos</span>
+          </button>
+        </div>
+        <label class="search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.8" cy="10.8" r="6.8"></circle>
+            <path d="m16 16 5 5"></path>
+          </svg>
+          <span class="sr-only">Buscar cliente</span>
+          <input type="search" placeholder="Buscar cliente..." data-table-search="clients-table">
+        </label>
+        <div class="table-wrap">
+          <table id="clients-table">
+            <thead><tr><th scope="col">ID</th><th scope="col">Nome</th><th scope="col">Email</th><th scope="col">Telefone</th></tr></thead>
+            <tbody>
+              {{#each clientes}}
+              <tr{{#if oculto}} class="initially-hidden"{{/if}}><td>{{id}}</td><td>{{nome}}</td><td>{{email}}</td><td>{{telefoneTexto}}</td></tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <p class="empty-state" hidden>Nenhum cliente encontrado.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>MR Soluções © 2026 · Todos os direitos reservados.</p>
+  </footer>

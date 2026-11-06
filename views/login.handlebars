@@ -1,0 +1,35 @@
+<main class="login-page">
+  <div class="login-card">
+    <div class="login-header">
+      <img src="/img/image_3-removebg-preview 1.png" alt="Logo MR" class="login-logo" />
+      <h1>Login entrar</h1>
+      <p>Seja bem-vindo(a) de volta.</p>
+    </div>
+
+    {{#if sucesso}}
+    <div class="msg-ok">{{sucesso}}</div>
+    {{/if}}
+    {{#if erro}}
+    <div class="msg-erro">{{erro}}</div>
+    {{/if}}
+
+    <form class="login-form" method="POST" action="/login">
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" value="{{email}}" placeholder="exemplo@email.com" required />
+
+      <label for="senha">Senha</label>
+      <input id="senha" name="senha" type="password" placeholder="Digite sua senha..." required />
+
+      <button type="submit" class="login-button">Entrar</button>
+    </form>
+
+    <a href="/cadastro" class="forgot-link">Criar uma conta</a>
+
+    <div class="divider"><span>Ou</span></div>
+
+    <button class="google-button">
+      <img src="/img/icon_google.png" alt="google" height="25px" width="25px" class="img-google">
+      Fazer login com o Google
+    </button>
+  </div>
+</main>

@@ -1,0 +1,310 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #ffff;
+    margin: 0;
+    padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+
+/*Inicio Conteudo Serviços*/
+.servicos {
+    position: relative;
+    z-index: 1;
+    margin-top: 55px;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.servicos h1 {
+    text-align: center;
+    margin-bottom: 200px;
+}
+.servicos h3 {
+    margin-left: 10%;
+}
+.servicos-exp {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.cardS {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 7px;
+    border-radius: 17px;
+    overflow: hidden;
+    margin-bottom: 70px;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardS:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(0, 100, 0, 0.15);
+    border-color: #b5dfbd;
+}
+.cardS img {
+    display: block;
+    width: 303px;
+    height: 256px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0;
+}
+.cardS:hover img {
+    transform: scale(1.025);
+}
+.cardS:hover .quadrado-card-serv {
+    opacity: 1;
+    transform: translateY(0);
+}
+.cardS:hover .title-card-serv {
+    opacity: 1;
+    transform: translateY(0);
+}
+.cardS:hover .btn-card-serv {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.cardS:hover .btn-card-serv:hover {
+    background: #006b25;
+    box-shadow: 0 5px 15px rgba(0, 150, 50, 0.3);
+}
+.quadrado-card-serv {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: calc(100% - 14px);
+    height: 256px;
+
+    background: rgba(0, 0, 0, 0.84);
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transform: translateY(-15px);
+    pointer-events: none;
+
+    transition: opacity 0.3s ease,
+                transform 0.3s ease;
+
+    z-index: 2;
+}
+.title-card-serv {
+    margin: 0;
+    padding: 15px;
+    font-size: 19px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    opacity: 1;
+    pointer-events: auto;
+}
+.btn-card-serv {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 22px;
+
+    background: linear-gradient(135deg, #00b83f, #008c2d);
+    color: white;
+
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+
+    opacity: 1;
+    pointer-events: auto;
+
+    transition: all 0.3s ease;
+}
+
+.btn-card-serv:hover {
+    background: #006b25;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 150, 50, 0.3);
+}
+
+.cardS > p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #222;
+    padding: 12px 5px 15px;
+    margin: 0;
+}
+
+
+.informacoes-complementares {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 4rem 20px;
+    box-sizing: border-box;
+  }
+  
+  .informacoes-complementares h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: #222;
+  }
+  
+  .infCompl-servicos {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 4rem;
+  }
+  
+  /* Alterna a ordem: imagem à direita, texto à esquerda */
+  .infCompl-servicos-reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .img-infCompl-servicos {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 350px;
+    border-radius: 8px;
+  }
+  
+  /* Texto */
+  .infCompl-servicos div {
+    max-width: 600px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    padding: 0 10px;
+  }
+  
+  .infCompl-servicos h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .infCompl-servicos p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  /* Botão */
+  .btn-infCompl-servicos {
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 30px;
+    background-color: #006400;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .btn-infCompl-servicos a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: normal;
+  }
+  
+  .btn-infCompl-servicos:hover {
+    background-color: #009933;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 900px) {
+    .infCompl-servicos,
+    .infCompl-servicos-reverse {
+      flex-direction: column !important;
+      gap: 2rem;
+      justify-content: center;
+    }
+  
+    .infCompl-servicos div {
+      max-width: 100%;
+      text-align: center;
+      padding: 0 15px;
+    }
+  
+    .btn-infCompl-servicos {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+  
+    .img-infCompl-servicos {
+      margin: 0 auto;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+  
+  
+  
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .servicos-exp {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cardS {
+        width: 90%;
+        margin: 20px 0;
+    }
+    .clt-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .carrosel video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .carrosel {
+        width: 300px;
+    }
+    .bar {
+        left: 130px;
+    }
+    .bar-2 {
+        right: 130px;
+    }
+    #clientesS h2 {
+        text-align: center;
+    }
+    .quadrado-card-serv {
+        width:288px;
+        padding: 10px;
+        text-align: center;
+    }
+    .cardS img {
+        width: 288px;
+    }
+}
+

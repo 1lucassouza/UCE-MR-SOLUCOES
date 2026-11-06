@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <rect width="300" height="300" fill="#eceff3"/>
+  <g fill="none" stroke="#9aa6b5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M150 85l65 32v66l-65 32-65-32v-66z"/>
+    <path d="M85 117l65 32 65-32M150 149v66"/>
+  </g>
+  <text x="150" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#7d8896">Sem imagem</text>
+</svg>
